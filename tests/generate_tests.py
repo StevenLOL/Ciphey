@@ -34,7 +34,7 @@ from rich.progress import track
 
 class test_generator:
     def __init__(self):
-        self.HOW_MANY_TESTS = 2
+        self.HOW_MANY_TESTS = 100
         self.enCiphey_obj = enciphey.encipher()
 
     def main(self):
@@ -65,7 +65,7 @@ def test_{cipher['Encrypted Texts']['CipherUsed']}_{id}():
         return f"""
 def test_{cipher['Encrypted Texts']['CipherUsed']}_{id}():
     # {cipher}
-    cfg = make_default_config({cipher['Encrypted Texts']['EncryptedText']})
+    cfg = make_default_config("{cipher['Encrypted Texts']['EncryptedText']}")
     cfg["debug"] = "TRACE"
     result = main(cfg)
 
